@@ -18,22 +18,37 @@
 </head>
 
 <body>
-    <header class="navbar navbar-expand-lg sticky-top">
+    <header class="navbar navbar-expand-lg sticky-top p-4">
         <div class="container">
-            <h1 class="navbar-brand">Restro</h1>
-            <nav>
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a href="#sobre" class="nav-link active">Sobre o restaurante</a>
+            <h1 class="navbar-brand m-0">Restro</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-nav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end" id="menu-nav">
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <a href="#sobre" class="nav-link active">
+                            <i class="me-1 bi bi-house-door"></i>
+                            Sobre o restaurante
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#eventos" class="nav-link">Eventos</a>
+                    <li class="nav-item fw-bold">
+                        <a href="#eventos" class="nav-link">
+                            <i class="me-1 bi bi-calendar-check"></i>
+                            Eventos
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#cardapio" class="nav-link">Nosso cardápio</a>
+                    <li class="nav-item fw-bold">
+                        <a href="#cardapio" class="nav-link">
+                            <i class="me-1 bi bi-card-text"></i>
+                            Nosso cardápio
+                        </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#contato" class="nav-link">Fale conosco</a>
+                    <li class="nav-item fw-bold">
+                        <a href="#contato" class="nav-link">
+                            <i class="me-1 bi bi-chat-left-text"></i>
+                            Fale conosco
+                        </a>
                     </li>
                 </ul>
             </nav>
