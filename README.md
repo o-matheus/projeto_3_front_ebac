@@ -3,7 +3,8 @@
 ## Menu
 [Aula 1 - Navbar](#aula-1---navbar)  
 [Aula 2 - Menu responsivo](#aula-2---menu-responsivo)  
-[Aula 3 - Sessão sobre, carrossel e alterações no menu](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
+[Aula 3 - Sobre, carrossel e alterações no menu](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
+[Aula 4 - Eventos - criação de cards](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
 
 ## Aula 1 - Navbar
 ### Descrição Geral
@@ -158,3 +159,51 @@ Por fim, o título do restaurante estava desalinhado devido a uma margem aplicad
   - `data-bs-target="#cabecalho"`
 - No `header`, adicionar `id="cabecalho"`.
 - Garantir que as `id`s nas `section`s correspondam aos `href`s dos itens do menu.
+
+## Aula 4 - Eventos, criação de cards
+
+## Construção da Section "Eventos"
+
+### 1. Estrutura Inicial
+- Criar uma `section` com o atributo `id="eventos"` e adicionar as classes `pt-5 pb-5` para espaçamento.
+- Dentro da `section`, criar uma `div` com a classe `container`.
+
+### 2. Título da Seção
+- Criar uma `row` dentro do `container`.
+- Inserir um `h2` com o texto "Para todas as ocasiões":
+  - Classe `section-title` para a fonte especial "Pacifico".
+  - Classe `text-center` para centralizar o título.
+  - A palavra "ocasiões" é envolvida em uma tag `<span>` com a classe `text-colored`, aplicando a cor laranja.
+
+### 3. Criação dos Cards de Eventos
+- Criar outra `row` logo abaixo do título, com a classe `mt-4` para adicionar espaçamento superior.
+- Cada evento é representado por uma coluna `col-md-4`, utilizando 1/3 do espaço em telas médias ou maiores.
+
+#### Conteúdo de Cada Card
+Para cada card:
+- Inserir uma imagem:
+  - Classes: `d-block w-100 rounded mb-2`.
+  - A imagem ocupa toda a largura da coluna e tem bordas arredondadas.
+- Inserir um título `h3`:
+  - Classes: `section-title text-colored fs-4`.
+  - Dentro do `h3`, antes do texto, adicionar um ícone utilizando uma tag `<i>`:
+    - Aniversários: `<i class="bi bi-calendar-heart-fill"></i>`
+    - Recepção para casamentos: `<i class="bi bi-arrow-through-heart-fill"></i>`
+    - Confraternizações: `<i class="bi bi-people-fill"></i>`
+- Inserir um parágrafo `<p>` com descrições reais sobre cada tipo de evento:
+
+##### Aniversários
+> Celebre momentos especiais com a gente! Nosso espaço oferece o ambiente perfeito para tornar seu aniversário inesquecível, com serviços personalizados e uma atmosfera acolhedora para todos os convidados.
+
+##### Recepção para casamentos
+> Realize o sonho do seu grande dia em um espaço que combina charme e sofisticação. Oferecemos uma estrutura completa para recepções, garantindo que cada detalhe da sua celebração seja memorável.
+
+##### Confraternizações
+> Compartilhe momentos únicos com quem você mais gosta! Nosso restaurante é ideal para confraternizações empresariais, encontros entre amigos ou comemorações familiares em um ambiente agradável e descontraído.
+
+### 4. Ajustes de Design
+- A cor laranja foi padronizada usando a classe `text-colored`, aplicada tanto nos títulos das seções quanto nos títulos dos cards.
+- O tamanho da fonte dos títulos dos cards foi reduzido usando a classe `fs-4`.
+
+### 5. ScrollSpy
+- A `section` de eventos está devidamente configurada com `id="eventos"` para ser reconhecida pelo `data-bs-spy="scroll"`, permitindo que o menu de navegação destaque corretamente a seção atual ao rolar a página.
