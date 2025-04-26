@@ -5,7 +5,9 @@
 [Aula 2 - Menu responsivo](#aula-2---menu-responsivo)  
 [Aula 3 - Sobre, carrossel e alterações no menu](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
 [Aula 4 - Eventos - criação de cards](#aula-4---eventos-criação-de-cards)  
-[Aula 5 - Cardapio](#aula-5---cardapio)  
+[Aula 5 - Cardapio](#aula-5---cardapio)
+[Aula 6 - Contato](#aula-6---criação-da-seção-contato)
+
 
 ## Aula 1 - Navbar
 ### Descrição Geral
@@ -266,3 +268,66 @@ Para cada card:
 ### 6. Conclusão
 - Finalizada a estrutura do cardápio com funcionamento de abas via Bootstrap.
 - Todo o design foi adaptado para manter a identidade visual consistente com as demais seções do projeto.
+
+## Aula 6 - Criação da Seção "Contato"
+
+### 1. Estrutura Inicial
+- Criar uma `section` com o atributo `id="contato"` e adicionar as classes `pt-5 pb-5` para espaçamento.
+- Dentro da `section`, criar uma `div` com a classe `container`.
+
+### 2. Título da Seção
+- Criar uma `row` dentro do `container`.
+- Inserir um `h2` com o texto "Fale Conosco":
+  - Classe `section-title` para a fonte especial "Pacifico".
+  - Classe `text-center` para centralizar o título.
+  - A palavra "Conosco" é envolvida em uma tag `<span>` com a classe `text-colored`, aplicando a cor laranja.
+
+### 3. Divisão em Colunas
+- Criar uma `row` com duas colunas:
+  - `col-md-7` para o formulário de contato.
+  - `col-md-5` para redes sociais e endereço.
+
+### 4. Formulário de Contato
+- Criar um `<form>` dentro da `col-md-7`.
+- Cada campo do formulário é envolvido em uma `div.mb-3`:
+  - `label` com classes `form-label`, `fw-bold` e `text-colored`.
+  - `input` ou `textarea` com a classe `form-control`.
+- Campos presentes:
+  - Nome
+  - E-mail
+  - Telefone
+  - Mensagem
+- Botão de envio:
+  - Classe `btn fw-bold`.
+  - Cor de fundo laranja e texto branco, reaproveitando o estilo do cardápio.
+
+### 5. Redes Sociais e Endereço
+- Dentro da `col-md-5`, criar duas `row`:
+
+#### Redes Sociais
+- Título `h3`:
+  - Classes: `section-title`, `fs-4`, `text-colored`.
+  - Ícone adicionado antes do texto: `<i class="bi bi-hand-thumbs-up-fill"></i>`.
+- Lista de redes sociais (`ul.social-links`):
+  - Cada `li` com classe `fs-5`.
+  - Cada `a` contendo um ícone:
+    - Facebook: `<i class="bi bi-facebook"></i>`
+    - Instagram: `<i class="bi bi-instagram"></i>`
+    - WhatsApp: `<i class="bi bi-whatsapp"></i>`
+  - Adicionado espaçamento entre ícones usando classes `ms-1` e `me-1`.
+
+#### Endereço
+- Título `h3`:
+  - Classes: `section-title`, `fs-4`, `text-colored`.
+  - Ícone adicionado: `<i class="bi bi-cursor-fill"></i>`.
+- Parágrafo com endereço fictício:
+  - "Rua teste exemplo nº145, Bairro Bootstrap - São Paulo - SP"
+- Espaçamento adicionado com `mt-4`.
+
+### 6. Ajustes de Design
+- A lista de redes sociais foi estilizada com a classe personalizada `social-links`:
+  - `li` com `list-style: none` e `display: inline`.
+  - `a` com `text-decoration: none`.
+- Todos os ícones e textos de redes sociais seguem o padrão de cor laranja.
+- Labels do formulário estão em negrito (`fw-bold`) e laranja (`text-colored`).
+- O botão de envio do formulário também segue a identidade visual laranja do site.
