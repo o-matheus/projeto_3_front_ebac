@@ -7,6 +7,7 @@
 [Aula 4 - Eventos - criação de cards](#aula-4---eventos-criação-de-cards)  
 [Aula 5 - Cardapio](#aula-5---cardapio)
 [Aula 6 - Contato](#aula-6---criação-da-seção-contato)
+[Aula 6 - Ajustes finais e responsividade](#aula-7---ajustes-finais-e-responsividade)
 
 
 ## Aula 1 - Navbar
@@ -331,3 +332,39 @@ Para cada card:
 - Todos os ícones e textos de redes sociais seguem o padrão de cor laranja.
 - Labels do formulário estão em negrito (`fw-bold`) e laranja (`text-colored`).
 - O botão de envio do formulário também segue a identidade visual laranja do site.
+
+## Aula 7 - Ajustes Finais e Responsividade
+
+### 1. Criação do Media Query para Mobile
+- Criado um `@media` no CSS para telas com `max-width: 767px`.
+- Ajuste aplicado:
+  - `.carousel-item img` recebe `max-height: 280px` para reduzir o tamanho excessivo das imagens no mobile.
+
+### 2. Espaçamento do Título "Sobre o Restaurante" no Mobile
+- Problema: Título muito colado à imagem no mobile.
+- Solução:
+  - Adicionar a classe `mt-3` ao `h2` "Sobre o Restaurante".
+
+### 3. Espaçamento na Seção de Contato
+- Problema: Título "Redes Sociais" muito próximo do botão do formulário.
+- Solução:
+  - Adicionar a classe `mb-5` na `div` do formulário para aumentar o espaçamento.
+
+### 4. Ajuste de Margem Condicional (Desktop vs Mobile)
+- A margem `mt-3` resolveu o problema no mobile, mas desalinhou o desktop.
+- Solução:
+  - Aplicar classes responsivas do Bootstrap:
+    - `mt-3` para mobile.
+    - `mt-md-0` para resoluções maiores (desktop e tablets).
+
+### 5. Correção do Scroll no Menu (ScrollSpy)
+- Problema: Ao clicar em "Eventos", a rolagem pulava direto para o cardápio.
+- Solução:
+  - Adicionar o atributo `data-bs-smooth-scroll="true"` na `div` principal do scroll spy.
+  - Isso ativa a rolagem suave e melhora a precisão.
+
+### 6. Desafios Adicionais Sugeridos (não implementados)
+- Implementar máscara de formulário usando **jQuery Mask**.
+- Implementar validação dos campos usando **jQuery Validation**.
+- Motivo para não implementar:
+  - Esses recursos já foram praticados em outros projetos anteriores e foram considerados desnecessários para este projeto atual.
