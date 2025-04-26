@@ -4,7 +4,8 @@
 [Aula 1 - Navbar](#aula-1---navbar)  
 [Aula 2 - Menu responsivo](#aula-2---menu-responsivo)  
 [Aula 3 - Sobre, carrossel e alterações no menu](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
-[Aula 4 - Eventos - criação de cards](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
+[Aula 4 - Eventos - criação de cards](#aula-4---eventos-criação-de-cards)  
+[Aula 5 - Cardapio](#aula-5---cardapio)  
 
 ## Aula 1 - Navbar
 ### Descrição Geral
@@ -162,8 +163,6 @@ Por fim, o título do restaurante estava desalinhado devido a uma margem aplicad
 
 ## Aula 4 - Eventos, criação de cards
 
-## Construção da Section "Eventos"
-
 ### 1. Estrutura Inicial
 - Criar uma `section` com o atributo `id="eventos"` e adicionar as classes `pt-5 pb-5` para espaçamento.
 - Dentro da `section`, criar uma `div` com a classe `container`.
@@ -207,3 +206,63 @@ Para cada card:
 
 ### 5. ScrollSpy
 - A `section` de eventos está devidamente configurada com `id="eventos"` para ser reconhecida pelo `data-bs-spy="scroll"`, permitindo que o menu de navegação destaque corretamente a seção atual ao rolar a página.
+
+## Aula 5 - Cardapio
+
+### 1. Estrutura Inicial
+- Criar uma `section` com `id="cardapio"`.
+- Aplicar as classes `pt-5 pb-5` para espaçamento superior e inferior.
+- Definir o fundo da seção com a mesma cor do "Sobre" (`#ffeae6`).
+
+### 2. Título da Seção
+- Inserir um `h2` com as classes `section-title`, `text-center` e `mb-5`.
+- Estrutura do título:
+  - "Nosso " normal
+  - "cardápio" dentro de uma tag `<span class="text-colored">` para aplicar a cor laranja.
+
+### 3. Estrutura de Navegação Lateral (Menu de Categorias)
+- Utilizar a tag `<aside>` com classe `col-md-2`.
+- Dentro do `aside`, criar uma `<nav>` com as classes `nav`, `nav-pills`, `flex-column`, e `nav-cardapio`.
+- Cada categoria do cardápio é um `<button>`:
+  - Tipo `button`.
+  - Classes: `fw-bold`, `text-start`, `nav-link`, `text-colored`.
+  - A primeira categoria ("Bebidas não alcoólicas") inicia com a classe `active`.
+- Atributos adicionados aos botões:
+  - `data-bs-toggle="tab"`
+  - `data-bs-target="#id-correspondente"`
+
+#### Categorias criadas:
+- Bebidas não alcoólicas
+- Bebidas alcoólicas
+- Entradas
+- Pratos principais
+- Sobremesas
+
+### 4. Conteúdo das Abas (Tab Content)
+- Criar uma `div` com a classe `col-md-10` ao lado do `aside`.
+- Dentro dela, criar uma `div` com a classe `tab-content`.
+
+#### Cada aba (`tab-pane`) contém:
+- Um `id` correspondente ao seu botão de navegação.
+- A primeira aba (bebidas sem álcool) recebe também a classe `active`.
+- Dentro de cada `tab-pane`, uma `row` que agrupa os itens em `col-md-3`, totalizando 4 itens por linha.
+
+#### Cada item (produto) contém:
+- Uma imagem `<img>` com classes `d-block w-100`.
+- Um título `<h5>` com as classes `text-colored fw-bold mt-2`.
+- Um parágrafo `<p>` com descrição do item (ainda com texto Lorem Ipsum nesta fase).
+
+### 5. Estilizações Específicas para o Cardápio
+- Todos os botões de navegação lateral usam a cor laranja (`text-colored`) para itens inativos.
+- O item ativo no cardápio usa:
+  - Fundo laranja (`background-color: #e15f41`)
+  - Texto branco (`color: #fff`)
+- Ao passar o mouse sobre os botões:
+  - Se for inativo, permanece laranja.
+  - Se for ativo, o hover mantém o texto branco.
+- Todos os botões estão com fonte em **negrito** (`fw-bold`).
+- O texto dos botões é alinhado à esquerda (`text-start`).
+
+### 6. Conclusão
+- Finalizada a estrutura do cardápio com funcionamento de abas via Bootstrap.
+- Todo o design foi adaptado para manter a identidade visual consistente com as demais seções do projeto.
