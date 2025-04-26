@@ -2,7 +2,8 @@
 
 ## Menu
 [Aula 1 - Navbar](#aula-1---navbar)  
-[Aula 1 - Menu responsivo](#aula-2---menu-responsivo)  
+[Aula 2 - Menu responsivo](#aula-2---menu-responsivo)  
+[Aula 3 - Sessão sobre, carrossel e alterações no menu](#aula-3---sessão-sobre-carrossel-e-ajustes-no-menu)  
 
 ## Aula 1 - Navbar
 ### Descrição Geral
@@ -78,3 +79,82 @@ Também fizemos uma alteração no *background* do menu usando o CSS criado ante
 
 Por fim, o título do restaurante estava desalinhado devido a uma margem aplicada pela classe `navbar-brand`. Para corrigir, aplicamos a classe `m-0`, que remove a margem e alinha corretamente o título.
 
+## Aula 3 - Sessão sobre, carrossel e ajustes no menu.
+
+### 1. Criação da Section "Sobre"
+- Criar uma `section` com o atributo `id="sobre"`.
+
+### 2. Construção da Estrutura Inicial do Carrossel
+- Dentro da `section`, criar uma `div` com as classes `carousel` e `slide`.
+- Dentro dessa `div`, criar outra `div` com a classe `carousel-inner`.
+- Dentro da `carousel-inner`, criar uma `div` para cada imagem:
+  - Cada `div` de imagem deve ter a classe `carousel-item`.
+  - Dentro de cada `carousel-item`, inserir uma imagem (`<img>`).
+
+### 3. Configuração da Imagem Inicial
+- Em uma das `divs` `carousel-item`, adicionar também a classe `active`.
+- Isso indicará que essa será a primeira imagem mostrada no carrossel.
+
+### 4. Ativação Automática do Carrossel
+- Na `div` principal do carrossel (aquela com `carousel` e `slide`), adicionar o atributo `data-bs-ride="carousel"`.
+
+### 5. Controle de Tempo entre as Imagens (Opcional)
+- Em cada `carousel-item`, é possível adicionar o atributo `data-bs-interval="tempo_em_milissegundos"`.
+- Se não for definido, o tempo padrão é entre 3 e 5 segundos.
+
+### 6. Adição de Controles Manuais (Botões de Navegação)
+- Criar dois botões:
+  - Botão de voltar: classe `carousel-control-prev`.
+  - Botão de avançar: classe `carousel-control-next`.
+- Cada botão deve:
+  - Ter o tipo `button`.
+  - Conter um `span` com a classe de ícone respectiva (`carousel-control-prev-icon` ou `carousel-control-next-icon`).
+
+### 7. Configuração dos Botões
+- A `div` principal do carrossel precisa ter um `id`, por exemplo, `id="carouselSobre"`.
+- Nos botões, adicionar:
+  - `data-bs-target="#carouselSobre"`
+  - `data-bs-slide="prev"` para o botão de voltar.
+  - `data-bs-slide="next"` para o botão de avançar.
+
+### 8. Criação dos Indicadores do Carrossel
+- Criar uma `div` com a classe `carousel-indicators`.
+- Dentro dela, adicionar um botão para cada imagem:
+  - Definir o tipo como `button`.
+  - Adicionar `data-bs-target="#carouselSobre"`.
+  - Adicionar `data-bs-slide-to="0"`, `data-bs-slide-to="1"`, etc., respeitando a numeração começando do 0.
+  - No botão do slide 0, adicionar a classe `active`.
+
+### 9. Construção da Parte Textual da Section "Sobre"
+- Fora da `div` do carrossel, criar uma `div` extra que receberá as classes de espaçamento (`pt-5 pb-5`).
+- Dentro dela:
+  - Criar uma `div` com a classe `container`.
+  - Dentro da `container`, criar uma `div` com a classe `row`.
+  - Criar duas colunas:
+    - Primeira coluna: `col-md-5`
+      - Inserir uma imagem (`<img>`) com as classes `d-block`, `w-100` e `rounded`.
+    - Segunda coluna: `col-md-7`
+      - Inserir os conteúdos:
+
+#### Sobre o Restaurante
+> No coração da cidade, nosso restaurante combina tradição e sofisticação. Oferecemos uma experiência gastronômica única, com pratos preparados cuidadosamente e um ambiente acolhedor, perfeito para encontros especiais e momentos inesquecíveis.
+
+#### Sobre o Espaço
+> Nosso espaço foi projetado para oferecer conforto e charme em cada detalhe. Com iluminação aconchegante e decoração refinada, garantimos uma atmosfera ideal tanto para jantares íntimos quanto para celebrações.
+
+#### Características:
+- Salão principal com capacidade para até 150 pessoas
+- Espaço reservado para eventos privativos
+- Área externa com jardim e iluminação especial
+
+### 10. Customizações Visuais
+- Criar a classe CSS `.section-title` para aplicar a fonte "Pacifico" (ou uma alternativa cursiva) a todos os títulos.
+- Englobar palavras importantes dos títulos (ex: "restaurante", "espaço") dentro de uma tag `<span>`, e definir a cor laranja para esses spans no CSS.
+- Definir uma cor de fundo para a section "Sobre", usando a mesma cor aplicada aos itens ativos do menu.
+
+### 11. Implementação do ScrollSpy no Menu
+- Englobar todo o conteúdo abaixo do header em uma `div` com:
+  - `data-bs-spy="scroll"`
+  - `data-bs-target="#cabecalho"`
+- No `header`, adicionar `id="cabecalho"`.
+- Garantir que as `id`s nas `section`s correspondam aos `href`s dos itens do menu.

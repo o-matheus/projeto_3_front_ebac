@@ -17,10 +17,19 @@ body {
     color: #fff;
 }
 
-.navbar-brand {
+.section-title {
     font-family: "Pacifico", cursive;
 }
 
 .navbar-toggler {
     background-color: #ffeae6;
 }
+#sobre {
+    background-color: #ffeae6;
+}
+
+.section-title span {
+    color: #e15f41;
+}
+
+
