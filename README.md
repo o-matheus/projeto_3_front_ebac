@@ -7,7 +7,7 @@
 [Aula 4 - Eventos - criação de cards](#aula-4---eventos-criação-de-cards)  
 [Aula 5 - Cardapio](#aula-5---cardapio)
 [Aula 6 - Contato](#aula-6---criação-da-seção-contato)
-[Aula 6 - Ajustes finais e responsividade](#aula-7---ajustes-finais-e-responsividade)
+[Aula 7 - Ajustes finais e responsividade](#aula-7---ajustes-finais-e-responsividade)
 
 
 ## Aula 1 - Navbar
